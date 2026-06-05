@@ -1,39 +1,64 @@
 # Motor-de-Intelig-ncia-de-Varejo
-Repositório no GitHub contendo o código orientado a objetos modularizado.
-POO
 
-✅ Classe abstrata ModeloAnalitico
+## Objetivo
 
-✅ Herança
+Desenvolver uma Prova de Conceito (PoC) para o backend analítico de um grande e-commerce utilizando Programação Orientada a Objetos, Big Data, Machine Learning, NLP e Sistemas de Recomendação.
 
-✅ Polimorfismo
+## Tecnologias Utilizadas
 
-✅ Encapsulamento (__dataset)
+* Python
+* PySpark
+* Pandas
+* Scikit-Learn
+* NetworkX
+* WordCloud
+* Matplotlib
 
-✅ Tratamento de exceções
+## Estrutura do Projeto
 
-Big Data
+* data_manager.py: ingestão e gerenciamento dos dados
+* models.py: classe abstrata ModeloAnalitico
+* churn_model.py: previsão de abandono de carrinho
+* nlp_analyzer.py: processamento de linguagem natural
+* recommender.py: motor de recomendação baseado em grafos
 
-✅ PySpark
+## Execução
 
-✅ Dataset com aproximadamente 1 milhão de registros
+```bash
+pip install -r requirements.txt
 
-Machine Learning
+python main.py
+```
 
-✅ Árvore de Decisão
+## Funcionalidades
 
-ou
+### Etapa 1 - Big Data
 
-✅ Rede Neural
+Carga e processamento de 1 milhão de registros utilizando PySpark.
 
-NLP
+### Etapa 2 - Machine Learning
 
-✅ Limpeza textual
+Treinamento de uma Árvore de Decisão para prever abandono de carrinho.
 
-✅ Extração de termos relevantes
+Variáveis utilizadas:
 
-✅ Word Cloud
+* idade
+* tempo_navegacao
+* valor_carrinho
+* quantidade_visitas
 
-Recomendação
+### Etapa 3 - NLP
 
-✅ Grafo utilizando NetworkX
+Extração de palavras relevantes dos comentários dos clientes e geração de Word Cloud.
+
+### Etapa 4 - Sistema de Recomendação
+
+Construção de um grafo de produtos comprados em conjunto utilizando NetworkX.
+
+## Resultados
+
+O sistema gera automaticamente:
+
+* Matriz de Confusão
+* Word Cloud
+* Grafo de Recomendações
